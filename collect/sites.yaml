@@ -1,0 +1,16 @@
+- name: Allensbach
+  url: https://www.wahlrecht.de/umfragen/allensbach.htm
+- name: Emnid
+  url: https://www.wahlrecht.de/umfragen/emnid.htm
+- name: Forsa
+  url: https://www.wahlrecht.de/umfragen/forsa.htm
+- name: "Forsch\u2019gr.Wahlen"
+  url: https://www.wahlrecht.de/umfragen/politbarometer.htm
+- name: GMS
+  url: https://www.wahlrecht.de/umfragen/gms.htm
+- name: Infratestdimap
+  url: https://www.wahlrecht.de/umfragen/dimap.htm
+- name: INSA
+  url: https://www.wahlrecht.de/umfragen/insa.htm
+- name: Yougov
+  url: https://www.wahlrecht.de/umfragen/yougov.htm
