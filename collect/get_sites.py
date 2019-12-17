@@ -2,9 +2,9 @@ from bs4 import BeautifulSoup
 import requests
 import yaml
 
+base_url = 'https://www.wahlrecht.de/umfragen'
 
 def get_sites():
-    base_url = 'https://www.wahlrecht.de/umfragen'
     soup = BeautifulSoup(requests.get(f'{base_url}/index.htm').text,
                          features="html.parser")
     sites = []
