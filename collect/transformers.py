@@ -18,9 +18,25 @@ class PercentageNoComma(object):
     def convert(match):
         return float(match.group(1)) / 100
 
+class NoPercentageSignWithComma(object):
+
+    pattern = re.compile(r"^(\d+,\d+)$")
+
+    @staticmethod
+    def convert(match):
+        return float(match.group(1).replace(",", ".")) / 100
+
+class NoPercentageSignNoComma(object):
+
+    pattern = re.compile(r"^(\d+)$")
+
+    @staticmethod
+    def convert(match):
+        return float(match.group(1)) / 100
 
 def transform(text):
-    transformers = [PercentageNoComma, PercentageWithComma]
+    transformers = [PercentageNoComma, PercentageWithComma,
+                    NoPercentageSignWithComma, NoPercentageSignNoComma]
     matches = [t.pattern.match(text) for t in transformers]
     if not any(matches):
         return text
